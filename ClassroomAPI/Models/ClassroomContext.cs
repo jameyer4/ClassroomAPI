@@ -1,14 +1,15 @@
-﻿using ClassroomAPI.Models.DB_Models;
+﻿using ClassroomAPI.Controllers;
+using ClassroomAPI.Models.DB_Models;
 using System.Data.Entity;
 
 namespace ClassroomAPI.Models
 {
     public class ClassroomContext : DbContext
     {
-        //public ClassroomContext() : base("name=ClassroomContext")
-        //{
-        //    Database.SetInitializer<ClassroomContext>(null);
-        //}
+        public ClassroomContext() : base("name=DefaultConnection")
+        {
+            Database.SetInitializer<ClassroomContext>(null);
+        }
 
         public DbSet<Student> Students { get; set; }
 
@@ -16,9 +17,9 @@ namespace ClassroomAPI.Models
 
         public DbSet<Tasks> Tasks { get; set; }
 
-        public DbSet<Teacher> Teacher { get; set; }
+        public DbSet<Users> Users { get; set; }
 
-        public DbSet<StudentMark> StudentMark { get; set; }
+        public DbSet<StudentMarks> StudentMark { get; set; }
 
         public DbSet<TeacherSubjects> TeacherSubjects { get; set; }
 

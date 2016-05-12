@@ -14,16 +14,16 @@ namespace ClassroomAPI.Controllers
         private ClassroomContext db = new ClassroomContext();
 
         // GET: api/StudentMarks
-        public IQueryable<StudentMark> GetStudentMark()
+        public IQueryable<StudentMarks> GetStudentMark()
         {
             return db.StudentMark;
         }
 
         // GET: api/StudentMarks/5
-        [ResponseType(typeof(StudentMark))]
+        [ResponseType(typeof(StudentMarks))]
         public IHttpActionResult GetStudentMark(int id)
         {
-            StudentMark studentMark = db.StudentMark.Find(id);
+            StudentMarks studentMark = db.StudentMark.Find(id);
             if (studentMark == null)
             {
                 return NotFound();
@@ -34,7 +34,7 @@ namespace ClassroomAPI.Controllers
 
         // PUT: api/StudentMarks/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutStudentMark(int id, StudentMark studentMark)
+        public IHttpActionResult PutStudentMark(int id, StudentMarks studentMark)
         {
             if (!ModelState.IsValid)
             {
@@ -68,8 +68,8 @@ namespace ClassroomAPI.Controllers
         }
 
         // POST: api/StudentMarks
-        [ResponseType(typeof(StudentMark))]
-        public IHttpActionResult PostStudentMark(StudentMark studentMark)
+        [ResponseType(typeof(StudentMarks))]
+        public IHttpActionResult PostStudentMark(StudentMarks studentMark)
         {
             if (!ModelState.IsValid)
             {
@@ -83,10 +83,10 @@ namespace ClassroomAPI.Controllers
         }
 
         // DELETE: api/StudentMarks/5
-        [ResponseType(typeof(StudentMark))]
+        [ResponseType(typeof(StudentMarks))]
         public IHttpActionResult DeleteStudentMark(int id)
         {
-            StudentMark studentMark = db.StudentMark.Find(id);
+            StudentMarks studentMark = db.StudentMark.Find(id);
             if (studentMark == null)
             {
                 return NotFound();

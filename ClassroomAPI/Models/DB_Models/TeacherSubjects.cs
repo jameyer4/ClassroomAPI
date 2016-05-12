@@ -9,7 +9,7 @@ namespace ClassroomAPI.Models.DB_Models
     public partial class TeacherSubjects
     {
         public int Id { get; set; }
-        public int TeacherId { get; set; }
+        public int UserId { get; set; }
         public int SubjectId { get; set; }
     }
     public partial class TeacherSubjects

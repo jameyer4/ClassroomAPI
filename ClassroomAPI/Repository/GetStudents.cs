@@ -29,8 +29,8 @@ namespace ClassroomAPI.Repository
 
         public List<Student> GetStudentsByTeacherUsername(string user)
         {
-            var teacherId = new GetTeachers().GetTeacherIdByUsername(user);
-            var markList = new GetMarks().GetMarksByTeacherId(teacherId).Where(m => m.TeacherSubjectId.Equals(1));
+            var userId = new GetUsers().GetUsersByUsername(user).Id;
+            var markList = new GetMarks().GetMarksByUserId(userId).Where(m => m.TeacherSubjectId.Equals(1));
             List<Student> students = new List<Student>();
             foreach (var x in markList)
             {

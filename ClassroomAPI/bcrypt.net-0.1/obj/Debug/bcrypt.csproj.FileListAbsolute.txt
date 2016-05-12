@@ -1,0 +1,5 @@
+D:\Git-Repos\ClassroomAPI\ClassroomAPI\bcrypt.net-0.1\bin\BCrypt.xml
+D:\Git-Repos\ClassroomAPI\ClassroomAPI\bcrypt.net-0.1\bin\BCrypt.dll
+D:\Git-Repos\ClassroomAPI\ClassroomAPI\bcrypt.net-0.1\bin\BCrypt.pdb
+D:\Git-Repos\ClassroomAPI\ClassroomAPI\bcrypt.net-0.1\obj\Debug\BCrypt.dll
+D:\Git-Repos\ClassroomAPI\ClassroomAPI\bcrypt.net-0.1\obj\Debug\BCrypt.pdb

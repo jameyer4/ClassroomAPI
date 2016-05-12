@@ -38,8 +38,8 @@ namespace ClassroomAPI.Repository
         public List<Subject> GetSubjectsByTeacherId(int id)
         {
             List<Subject> subjects = new List<Subject>();
-            var teacher = _db.TeacherSubjects.Where(ts => ts.TeacherId.Equals(id));
-            foreach (var item in teacher)
+            var user = _db.TeacherSubjects.Where(ts => ts.UserId.Equals(id));
+            foreach (var item in user)
             {
                 subjects.Add(GetSubjectById(item.SubjectId));
             }

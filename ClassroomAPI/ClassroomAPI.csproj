@@ -77,6 +77,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\bcrypt.net-0.1\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -239,8 +242,10 @@
     <Compile Include="Controllers\StudentMarksController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Controllers\TasksController.cs" />
-    <Compile Include="Controllers\TeachersController.cs" />
     <Compile Include="Controllers\TeacherSubjectsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Functions\PasswordHandler.cs" />
+    <Compile Include="Models\DB_Models\Users.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -253,7 +258,6 @@
     <Compile Include="Models\DB_Models\StudentMarks.cs" />
     <Compile Include="Models\DB_Models\Subject.cs" />
     <Compile Include="Models\DB_Models\Tasks.cs" />
-    <Compile Include="Models\DB_Models\Teacher.cs" />
     <Compile Include="Models\DB_Models\TeacherSubjects.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -337,6 +341,12 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="bcrypt.net-0.1\bcrypt.csproj">
+      <Project>{31a33e48-6e10-4398-af5f-61c535ece130}</Project>
+      <Name>bcrypt</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

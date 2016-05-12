@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassroomAPI", "ClassroomAP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassroomAPI.Tests", "ClassroomAPI.Tests\ClassroomAPI.Tests.csproj", "{ACEF6F9B-53C1-47B2-95BA-A77A2A24DBE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bcrypt", "ClassroomAPI\bcrypt.net-0.1\bcrypt.csproj", "{31A33E48-6E10-4398-AF5F-61C535ECE130}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{ACEF6F9B-53C1-47B2-95BA-A77A2A24DBE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACEF6F9B-53C1-47B2-95BA-A77A2A24DBE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACEF6F9B-53C1-47B2-95BA-A77A2A24DBE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31A33E48-6E10-4398-AF5F-61C535ECE130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31A33E48-6E10-4398-AF5F-61C535ECE130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31A33E48-6E10-4398-AF5F-61C535ECE130}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{31A33E48-6E10-4398-AF5F-61C535ECE130}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

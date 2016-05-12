@@ -12,7 +12,7 @@ namespace ClassroomAPI.Models.DB_Models
         public DateTime SubmissionDate { get; set; }
         public string TaskName { get; set; }
         public string Description { get; set; }
-        public int TeacherId { get; set; }
+        public int UserId { get; set; }
     }
     public partial class TaskManager
     {

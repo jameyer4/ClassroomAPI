@@ -5,17 +5,17 @@ using System.Web;
 
 namespace ClassroomAPI.Models.DB_Models
 {
-    public partial class StudentMark
+    public partial class StudentMarks
     {
         public int Id { get; set; }
         public int TeacherSubjectId { get; set; }
         public int StudentId { get; set; }
         public double? Mark { get; set; }
-        public int TeacherId { get; set; }
+        public int UserId { get; set; }
         public int TaskId { get; set; }
     }
-    public partial class StudentMark
+    public partial class StudentMarks
     {
-        public List<StudentMark> StudentMarkList { get; set; }
+        public List<StudentMarks> StudentMarkList { get; set; }
     }
 }

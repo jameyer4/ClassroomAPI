@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassroomAPI.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,10 +23,10 @@ namespace ClassroomAPI.Repository
             GetSubjects subjects = new GetSubjects();
             return subjects;
         }
-        public GetTeachers Teachers()
+        public GetUsers Users()
         {
-            GetTeachers teachers = new GetTeachers();
-            return teachers;
+            GetUsers users = new GetUsers();
+            return users;
         }
     }
 }

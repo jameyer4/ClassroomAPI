@@ -5,45 +5,45 @@ using ClassroomAPI.Models.DB_Models;
 
 namespace ClassroomAPI.Repository
 {
-    public class GetTeachers
+    public class GetUsers
     {
         private readonly ClassroomContext _db = new ClassroomContext();
         Repository rep = new Repository();
         //GetMarks marks = new GetMarks();
         //GetSubjects subjects = new GetSubjects();
-        public GetTeachers()
+        public GetUsers()
         {
 
         }
 
-        public List<Teacher> GetAllTeachers()
+        public List<Users> GetAllUserss()
         {
-            List<Teacher> teachers = _db.Teacher.ToList();
-            return teachers;
+            List<Users> users = _db.Users.ToList();
+            return users;
         }
 
-        public Teacher GetTeacherById(int id)
+        public Users GetUsersById(int id)
         {
-            Teacher teacher = _db.Teacher.Single(x => x.Id == id);
-            return teacher;
+            Users user = _db.Users.Single(x => x.Id == id);
+            return user;
         }
 
-        public Teacher GetTeacherByUsername(string name)
+        public Users GetUsersByUsername(string name)
         {
-            Teacher teacher = new ClassroomContext().Teacher.Where(x => x.UserName.Equals(name)).Single();
-            return teacher;
+            Users user = new ClassroomContext().Users.Where(x => x.UserName.Equals(name)).Single();
+            return user;
         }
-        public string GetTeacherUsernameById(int id)
+        public string GetUsersUsernameById(int id)
         {
-            var username = _db.Teacher.Single(x => x.Id == id).UserName;
+            var username = _db.Users.Single(x => x.Id == id).UserName;
             return username;
         }
-        public int GetTeacherIdByUsername(string name)
+        public int GetUsersIdByUsername(string name)
         {
-            var id = GetTeacherByUsername(name).Id;
+            var id = GetUsersByUsername(name).Id;
             return id;
         }
-        public List<Teacher> GetTeachersByStudentId(int id)
+        public List<Users> GetUserssByStudentId(int id)
         {
 
             var markList = new GetMarks().GetMarksByStudentId(id);
@@ -53,12 +53,12 @@ namespace ClassroomAPI.Repository
             {
                 subjectList.Add(new GetSubjects().GetSubjectByMarkId(x.Id));
             }
-            List<Teacher> teachers = new List<Teacher>();
+            List<Users> users = new List<Users>();
             foreach (var x in subjectList)
             {
-                teachers.Add(GetTeacherById(x.Id));
+                users.Add(GetUsersById(x.Id));
             }
-            return teachers;
+            return users;
         }
     }
 }
